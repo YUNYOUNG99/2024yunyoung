@@ -1,66 +1,66 @@
-<!DOCTYPE html>
+<!DOCYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>온라인 전시</title>
-    <style>
-        body {
-            font-family: 'Malgun Gothic', sans-serif;
-            background-color: black;
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column; /* 세로 중앙 정렬을 위해 */
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px; /* 메인 화면 최대 너비 */
-            margin: auto;
-            padding: 20px;
-        }
-        .artwork-container {
-            width: 100%; /* 작품 이미지 너비 */
-            max-width: 400px; /* 작품 이미지 최대 너비 */
-            margin-bottom: 30px; /* 작품 사이 간격 */
-            position: relative;
-        }
-        .artwork-img {
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.5s ease;
-        }
-        .artwork-back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: left; /* 왼쪽 정렬 */
-            z-index: 1; /* 이미지 위에 띄우기 */
-            opacity: 0; /* 초기에는 숨김 */
-            transition: opacity 0.3s ease;
-        }
-        .artwork-container.active .artwork-back {
-            display: block;
-            opacity: 1; /* 활성화되면 투명도 적용 */
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: white;
+<머리>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>온라인 전시</title>
+ <스타일>
+ 육신 {
+ 폰트-패밀리: '말군 고딕', sans-serif;
+ 배경-색상: 검은색;
+ 색상: 흰색;
+ 여백: 0;
+ 패딩: 0;
+ 디스플레이: 플렉스;
+ 정당화-내용: 중심;
+ 정렬 - items: 중앙;
+ 최소 높이: 100vh;
+ 플렉스-direction: 열; /* 세로 중앙 정렬을 위해 */
+ }
+ 메인 {
+ 디스플레이: 플렉스;
+ 플렉스 direction: 열;
+ 정렬 - items: 중앙;
+ max-width: 600px; /* 메인 화면 최대 너비 */
+ 여백: 자동;
+ 패딩: px;
+ }
+ .artwork-container {
+ width: 100%; /* 작품 이미지 너비 */
+ max-width: 400px; /* 작품 이미지 최대 너비 */
+ 여백 하단: px; /* 작품 사이 간격 */
+ 위치: 상대적;
+ }
+ .artwork-img {
+ 폭: 100%;
+ 높이: 자동;
+ 커서: 포인터;
+ 전환: 변환 0.5 sease;
+ }
+ .artwork백 {
+ 위치: 절대;
+ 상단: 0;
+ 왼쪽: 0;
+ 디스플레이: 없음;
+ 폭: 100%;
+ 배경색: rgba(0, 0, 0, 0.8);
+ 색상: 흰색;
+ 패딩: px;
+ 박스-sizing: 테두리-박스;
+ text-align: left; /* 왼쪽 정렬 */
+ z-index: 1; /* 이미지 위에 띄우기 */
+ opacity: 0; /* 초기에는 숨김 */
+ 전환: 불투명도 0.3 sease;
+ }
+ .artwork-container.액티브.artwork-백 {
+ 디스플레이: 블록;
+ opacity: 1; /* 활성화되면 투명도 적용 */
+ }
+ .close-btn {
+ 위치: 절대;
+ 상단: 10개의 px;
+ right: px;
+ 색상: 흰색;
             cursor: pointer;
             font-size: 1.2em;
         }
